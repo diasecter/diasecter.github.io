@@ -1,0 +1,5 @@
+flask
+folium
+pandas
+matplotlib
+scikit-learn
