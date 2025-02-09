@@ -2,3 +2,6 @@ flask
 folium
 pandas
 matplotlib
+WTForms 
+Flask_WTF 
+email_validator
