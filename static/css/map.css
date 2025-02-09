@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --primary-color: rgb(22, 196, 127);
+    --primary-hover-color: rgb(17, 143, 93);
+    --secondary-color: rgb(249, 56, 39);
+    --highlight-color: rgb(255, 214, 90);
+    --orange-color: rgb(255, 157, 35);
+    --header-height: 50px;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Mona Sans", serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 1400px;
+    background: #f6f8fa;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+::selection {
+    color: #fff;
+    background: #4285f4;
+}
+
+
+/* container styles */
+
+.container {
+    text-align: center;
+    margin-top: var(--header-height);
+}
+
+.container h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+
+/* Custom dropdown styles */
+.language-select {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.dropdown {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 8rem;
+    text-align: left;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.dropdown .selected {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown .options {
+    display: none;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 8rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.dropdown .options div {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.dropdown .options div:hover {
+    background-color: #f0f0f0;
+}
+
+.hidden-select {
+    display: none;
+}
+
+
+
+#map {
+    margin: 0 auto;
+    height: 800px;
+    width: 80%;
+}
+
+.leaflet-container, .leaflet-bar a:first-child, a:last-child {
+    font-family: "Mona Sans", serif;
+}
+
+.leaflet-control-attribution.leaflet-control {
+    display: none;
+}

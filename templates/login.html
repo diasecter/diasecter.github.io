@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>diasecter. - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>diasecter<span class="point">.</span></h1>
+            <h2>Se connecter</h2>
+
+            <!-- Error message will be displayed here if there's an issue -->
+            {% with messages = get_flashed_messages(category_filter=["danger"]) %}
+                {% if messages %}
+                    <p class="error-message">{{ messages[0] }}</p>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Login Form -->
+            <form method="POST" action="{{ url_for('login') }}" id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Entrez votre email">
+                </div>
+                <div class="input-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required placeholder="Entrez votre mot de passe">
+                </div>
+                <div class="extra-options">
+                    <div class="keep-logged-in">
+                        <input type="checkbox" id="keepLoggedIn" name="keepLoggedIn">
+                        <label for="keepLoggedIn">Rester connecté</label>
+                    </div>
+                    <div class="password-forgotten">
+                        <a href="{{ url_for('forgotpassword') }}">Mot de passe oublié?</a>
+                    </div>
+                </div>
+                <button type="submit" class="login-button">Se connecter</button>
+            </form>
+
+            <div class="signup-option">
+                <p>Vous n'avez pas de compte ? <a href="{{ url_for('signup') }}">Créer un</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

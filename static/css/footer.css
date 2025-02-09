@@ -1,0 +1,31 @@
+/* Footer styles */
+.footer {
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-logo h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .footer-logo .point {
+    color: var(--primary-color);
+  }
+  
+  .footer-center p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .back-to-top .top-button {
+    font-size: 18px;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .back-to-top .top-button:hover {
+    color: #0056b3;
+  }

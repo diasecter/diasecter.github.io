@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diasecter. - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class="container">
+        <div class="dashboard">
+            <!-- Menu -->
+            <div class="menu">
+                <span>Données</span> 
+            </div>
+
+            <div class="content">
+                <!-- Filters -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="region">Région</label>
+                        <select id="region" class="form-select">
+                            <option value="">Sélectionner une région</option>
+                            <!-- Regions dynamically populated -->
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="province">Province</label>
+                        <select id="province" class="form-select">
+                            <option value="">Sélectionner une province</option>
+                            <!-- Provinces dynamically populated -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- kpis -->
+                <div class="kpis">
+                    <div class="kpi-grid">
+                        <div id="kpi-selection"></div>
+                    </div>                                      
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
